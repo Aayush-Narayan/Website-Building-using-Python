@@ -1,0 +1,21 @@
+html {
+  font-size: 22px;
+}
+body {  
+  background-color: black;
+  color: whitesmoke;
+}
+a { color:rgb(30, 177, 177) }
+a:visited { color: rgb(117, 115, 115) }
+a:hover, a:active { color: blue}
+table {
+  width: 50%;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+}

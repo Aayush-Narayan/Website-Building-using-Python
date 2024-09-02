@@ -1,0 +1,300 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="Author" content="Aayush Narayan">
+    <meta name="Description" content="These are all the things that I learnt from my 1st web page in HTML.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta http-equiv="refresh" content="600">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='CartoonPFP.png') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/main.css') }}">
+    <title>My First WebPage</title>
+</head>
+<body>
+
+<header>
+    <article id="Greetings">
+        <hr>
+        <h1>Hello Viewers!</h1>
+        <section>
+            <figure>
+                <a href="{{ url_for('about') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='Images/CartoonPFP.png') }}" alt="Just My Cartoon PFP" loading="lazy" title="Just Me" height="205" width="205">
+                </a>                
+                <figcaption> &nbsp;With Aayush Narayan</figcaption>
+            </figure>
+            <h2>Let's Go...</h2>
+        </section>
+        <hr>
+        <h2><b>Contents:</b></h2>
+        <nav>
+            <ul>
+                <li><a href="#Greetings">Greetings</a></li>
+                <li><a href="#PrimaryTags">Primary tags</a></li>
+                <li><a href="#OtherUsefulTags">Other useful tags</a></li>
+                <li><a href="#Lists">Lists</a></li>
+                <li><a href="#Links">Links</a></li>
+                <li><a href="#SemanticTags">Semantic Tags</a></li>
+                <li><a href="#Tables">Table Tags</a></li>
+                <li><a href="#InputAndForms">Input and Forms</a></li>
+                <li><a href="#copyrightAndAboutMe">copyright and about me</a></li>
+            </ul>
+        </nav> 
+    </article>
+</header>
+<hr>
+<main>
+<div id="PrimaryTags">
+    <p> -> I used "hr" tag to give a line in the middle to separate the divs in the webpage</p><hr>
+    <p>-> This is my 1st WebPage and I'm using "p" tag for writing paragraphs. The paragraph (p) tag leaves an extra line space unlike the br tag which is used to break a line.</p>
+    <p>-> You can write a whole paragraph with gibberish words to use in an experiment or test or just for fun by typing- <b>"lorem*(number of paragraph you want)" in the p tag. For example, lorem*1 gives: <br></b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, modi officia atque incidunt porro minima sit iusto rem non assumenda magni veniam architecto dolore illum doloribus fugit! Repellendus, omnis ipsam.</p>
+    <hr>
+    <h2>These are the tags I'm using for now</h2>
+    -> Br is used for line break <br>
+    <p>-> We can use <em>emphasize tag </em> or <b>bold tag</b> or <i>italic tag</i> or <u>underlined tag</u> or <strong>strong tag</strong> to make the text unique and meaningful.</p>
+    <hr>
+</div>
+<div id="OtherUsefulTags">
+    <p>-> "& NonBreakingSpace;" or "& nbsp;" tag is used for a whitespace, each of them (&nbsp;) creates one whitespace.
+    <br>-> &copy; is used for copyright symbol.
+    <br>-> &lt; and &gt; are used for less than and greater than symbols.
+    <br> -> <abbr title="We use the abbreviation tag(abbr title)">Move the cursor here</abbr>
+    <br> -> We can mention the address as follows <br><address> C.V. Raman Global University, Bhubaneswar</address>
+    <br> -> We can use the comment tag by using <!-- we put a white space so that it will show in the webpage --> "&lt;!--" at the starting and "--&gt;" in the end of the comment.  
+    </p>
+</div>
+<hr>
+<div id="Lists">
+    <p> -> Now we are going to learn about the three types of lists:-
+    <ol>
+        <li><u>ordered list</u></li>
+        <li>Unordered list</li>
+        <li>Description List</li>
+    </ol>
+    <hr>
+    <ul>
+        <li><u>Unordered list</u></li>
+        <li>Ordered list</li>
+        <li>Description List</li>
+    </ul>
+    <hr>
+    <dl>
+        <dt>Description List</dt> <!-- Description Term -->
+        <dd>This is a list where we have two parts, one is the term and other is the description.</dd> <!-- Description Details -->
+        <dt>Ordered List</dt>
+        <dd>This is a list where we have items in a specific order.</dd>
+        <dt>Unordered List</dt>
+        <dd>This is a list where we have items in a non-ordered manner.</dd>
+    </dl>
+</div>
+<hr>
+<div id="Links">
+    <p> Now we will learn about adding links:</p>
+    <br>To link a link to a word we use a tag and href attribute. e.g.- <a href="https://validator.w3.org/#validate_by_upload" target="_blank">Click here to review your webpage at validator</a>
+    <br>-> We use the full link for the above website and just the name to link the icon image because the link for the icon is present in the same folder as my HTML file; thus, we provide relative reference unlike the above website where we provide the absolute reference.
+    <p>
+        <br> -> You can create a direct link to a webpage, for example Google, in a new tab as follows: <a href="https://www.google.com" target="_blank">Google</a>
+        <br> -> You can also create a download link as follows:
+        <br> <a href="{{ url_for('static', filename='CartoonPFP.png') }}" download>My Cartoon PFP ^_^</a>
+    </p>
+    <hr>
+    <p>-> Contact me at <a href="mailto:random123@gmail.com">My email address </a> 
+    <br>-> Or just dial at <a href="tel:+919876543210">My Phone no.</a>
+    <!-- We don't recommend using these methods as there are many spiders scrolling the web who can easily harvest these email addresses. Instead, most people use forms for contact. The same goes for phone numbers. -->
+    </p>
+</div>
+<hr>
+<article>
+    <h2>Semantic Tags:</h2>
+    <section id="SemanticTags">
+        <h3>Usage:</h3>
+        <p>Semantic tags help search engines understand the structure of your website, making it easier for users to find and navigate your content. They also improve accessibility for people with disabilities.</p>
+        <p>Some common semantic tags include: <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code>, and <code>&lt;details&gt;</code>.</p>
+    </section>
+    <section>
+        <h3>Examples:</h3>
+        <p>
+        <code>&lt;header&gt;</code> for the header section of a page.
+        <br><code>&lt;footer&gt;</code> for the footer section of a page.
+        <br><code>&lt;nav&gt;</code> for navigation links.
+        <br><code>&lt;main&gt;</code> for the main content area.
+        <br><code>&lt;article&gt;</code> for a standalone piece of content.
+        <br><code>&lt;section&gt;</code> for a thematic grouping of content.
+        <br><code>&lt;aside&gt;</code> for content that is related to the main content but is not essential to its functionality.
+        <br><code>&lt;figure&gt;</code> for self-contained content, like images, diagrams, or illustrations.
+        </p>
+    </section>
+    <section>
+        <h2>Points you can look into:</h2>
+        <aside>
+            <details>
+                <summary>Additional Information</summary>
+                <ul>
+                    <li>Semantic tags help search engines understand the structure of your website, making it easier for users to find and navigate your content.</li>
+                    <li>Semantic tags can also be used to <mark> create custom elements</mark> or extend the functionality of existing HTML elements.</li>
+                    <li>Semantic tags should be used judiciously, as they can make your code more readable and easier to maintain.</li>
+                    <li>Sometimes, you may need to use non-semantic tags like <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> when you need to create a block-level element or group related content without using semantic tags.</li>
+                </ul>
+            </details>
+        </aside>
+        <aside>
+            <details>
+                <summary>Example of a structured HTML WebPage</summary>
+                <code>Copy and paste the example below and replace
+                    "#" with "&lt;!--" and "/#" with "--&gt;", then run it.
+                    <!--                      
+                    #The <header> tag is used to define the introductory content or a set of navigational links. /#
+                    <header>
+                        <h1>My Website</h1>
+                        <nav>
+                            #The <nav> tag is used for the set of navigation links. /#
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    # The <main> tag is used for the main content of the document. It should be unique and not repeated across pages. Since we already used the main tag we commented out the main tag. /#
+                    <main>
+                        # The <article> tag is used for self-contained content that could be independently distributed. /#
+                        <article>
+                            <header>
+                                <h2>Blog Post Title</h2>
+                                <p>Posted on <time datetime="2024-07-22">July 22, 2024</time> by Author</p>
+                            </header>
+                            <p>This is the main content of the blog post. It contains all the necessary information that can stand alone.</p>
+                        </article>
+                        # The <section> tag is used to group related content together. /#
+                        <section id="about">
+                            <h2>About Us</h2>
+                            <p>This section provides information about the organization.</p>
+                        </section>
+                        <section id="services">
+                            <h2>Our Services</h2>
+                            <p>Details about the services offered by the organization.</p>
+                            # The <aside> tag is used for content that is related to the main content but is not essential. /#
+                            <aside>
+                                <h3>Related Services</h3>
+                                <p>Additional services that complement the main services offered.</p>
+                            </aside>
+                        </section>
+                        <section>
+                            <h2>Gallery</h2>
+                            # The <figure> tag is used to encapsulate images and their captions. /#
+                            <figure>
+                                <img src="image1.jpg" alt="Description of image 1">
+                                # The <figcaption> tag is used to provide a caption for the <figure>. /#
+                                <figcaption>Caption for image 1</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="image2.jpg" alt="Description of image 2">
+                                <figcaption>Caption for image 2</figcaption>
+                            </figure>
+                        </section>
+                        # The <details> tag is used to create an interactive widget that the user can open and close. /#
+                        <details>
+                            # The <summary> tag is used to provide a summary or label for the <details> element. /#
+                            <summary>More Information</summary>
+                            <p>Additional details that the user can view by expanding this section.</p>
+                        </details>
+                    </main>
+                    # The <footer> tag is used to define the footer for the document or a section. /#
+                    <footer>
+                        <p>&copy; 2024 Your Name. All rights reserved.</p>
+                        <nav>
+                            <ul>
+                                <li><a href="#privacy">Privacy Policy</a></li>
+                                <li><a href="#terms">Terms of Service</a></li>
+                            </ul>
+                        </nav>
+                    </footer> -->
+                </code>
+            </details>
+        </aside>
+    </section>
+</article>
+
+<hr><br><hr>
+<div id="Tables">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>28</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Mark Johnson</td>
+                <td>35</td>
+                <td>Australia</td>
+            </tr>
+            <tr>
+                <td rowspan="4">Unknown</td>
+                <td>Between</td>
+                <td>19</td>
+                <td>or</td>
+                <td>20</td>
+                <td rowspan="3">Don't know</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td rowspan="2">Me of course</td>
+                <td rowspan="2">22</td>
+                <td>UAE</td>
+            </tr>
+            <tr>
+                <td>Dubai</td>
+            </tr>
+            <tr>
+                <td>Total Name</td>
+                <td colspan="2">4</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total Records: 4</td>
+            </tr>
+        </tfoot>
+    </table>
+</div><br>
+<hr>
+<div id="InputAndForms">
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<div id="copyrightAndAboutMe">
+    <hr>
+    <b>&lt;&lt;&lt;&nbsp;&copy;&nbsp; <a href="{{ url_for('about') }}">Aayush Narayan</a>&nbsp;&gt;&gt;&gt;</b>
+</div>
+<br><a href="#">Back to Top</a>
+</main>
+<footer>
+    <br><a href="{{ url_for('index') }}">Back to Home</a>
+</footer>
+</body>
+</html>
